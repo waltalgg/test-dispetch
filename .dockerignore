@@ -1,0 +1,7 @@
+.git
+.idea
+.vscode
+app/var/cache
+app/var/log
+app/vendor
+docker/mysql

@@ -1,0 +1,7 @@
+/app/.env.local
+/app/.env.*.local
+/app/vendor/
+/app/var/
+/docker/mysql/
+/.idea/
+/.vscode/
