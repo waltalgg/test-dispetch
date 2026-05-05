@@ -5,3 +5,15 @@ services:
 
     App\:
         resource: '../src/'
+
+    App\Domain\Organization\OrganizationCheckRepository:
+        alias: App\Infrastructure\Persistence\Doctrine\DoctrineOrganizationCheckRepository
+
+    App\Domain\Organization\OrganizationLookupGateway:
+        alias: App\Infrastructure\DaData\DadataOrganizationLookupGateway
+
+    App\Infrastructure\DaData\DadataOrganizationLookupGateway:
+        arguments:
+            $apiKey: '%env(DADATA_API_KEY)%'
+            $secret: '%env(DADATA_SECRET)%'
+            $baseUri: '%env(DADATA_BASE_URI)%'
